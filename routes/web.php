@@ -8,6 +8,7 @@ use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LaporanController;
 
 
 
@@ -39,6 +40,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::resource('transaksi', TransaksiController::class);
     Route::get('/profil', [UserController::class, 'index']);
     Route::get('/setting', [UserController::class, 'setting']);
+    Route::get('/laporan', [LaporanController::class, 'index']);
+    Route::get('/proseslaporan', [LaporanController::class, 'proses']);
 
 
 
