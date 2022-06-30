@@ -5,6 +5,9 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\TransaksiController;
+
 
 
 
@@ -30,6 +33,11 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/', [DashboardController::class, 'index']);
     Route::resource('kategori', KategoriController::class);
     Route::resource('produk', ProdukController::class);
+    Route::resource('produk', ProdukController::class);
+    Route::resource('customer', CustomerController::class);
+    Route::resource('transaksi', TransaksiController::class);
+
+
 
 
 
