@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\ProdukController;
+
+
 
 
 /*
@@ -24,5 +28,10 @@ Route::get('/kategori', [HomepageController::class, 'kategori']);
 //admin
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/', [DashboardController::class, 'index']);
+    Route::resource('kategori', KategoriController::class);
+    Route::resource('produk', ProdukController::class);
+
+
+
   });
 
