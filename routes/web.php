@@ -7,6 +7,7 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -36,7 +37,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::resource('produk', ProdukController::class);
     Route::resource('customer', CustomerController::class);
     Route::resource('transaksi', TransaksiController::class);
-
+    Route::get('/profil', [UserController::class, 'index']);
+    Route::get('/setting', [UserController::class, 'setting']);
 
 
 

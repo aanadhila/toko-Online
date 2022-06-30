@@ -78,6 +78,7 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="utilities-color.html">Penjualan</a>
+                        <a class="collapse-item" href="{{ URL::to('admin/profil') }}">Profil</a>
                     </div>
                 </div>
             </li>
