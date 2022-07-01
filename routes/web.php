@@ -9,8 +9,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LaporanController;
-
-
+use App\Http\Controllers\ImageController;
 
 
 
@@ -42,8 +41,11 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/setting', [UserController::class, 'setting']);
     Route::get('/laporan', [LaporanController::class, 'index']);
     Route::get('/proseslaporan', [LaporanController::class, 'proses']);
-
-
+    Route::get('image', [ImageController::class, 'index']);
+    Route::post('image', [ImageController::class, 'store']);
+    Route::delete('image/{id}', [ImageController::class, 'destroy']);
+    Route::post('produkimage', [ProdukController::class, 'uploadimage']);
+    Route::delete('produkimage/{id}', [ProdukController::class, 'deleteimage']);
 
 
   });
